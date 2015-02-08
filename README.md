@@ -37,7 +37,7 @@ Pada dasarnya dalam pengaturan file dan folder yang terkait dengan pembuatan apl
 
 ###Terminal
 
-Sebagian besar interaksi kita dengan komputer dilakukan melalui interaksi antarmuka sebagai pengguna grafis (GUI). Digunakan keyboard, mouse dan layar sentuh untuk berinteraksi dengan tombol visual atau jenis lainnya dari kontrol yang ditampilkan pada layar. Sebelum GUI berkembang, terlebih dahuku digunakan terminal yaitu sebuah tekstual antarmuka  sederhana untuk komputer yang digunakan dengan memberikan perintah dan menerima balasan untuk memanipulasi tombol pada layar komputer. 
+Sebagian besar interaksi kita dengan komputer dilakukan melalui interaksi antarmuka sebagai pengguna grafis (GUI). Digunakan keyboard, mouse dan layar sentuh untuk berinteraksi dengan tombol visual atau jenis lainnya dari kontrol yang ditampilkan pada layar. Sebelum GUI berkembang, terlebih dahulu digunakan terminal yaitu sebuah tekstual antarmuka  sederhana untuk komputer yang digunakan dengan memberikan perintah dan menerima balasan untuk memanipulasi tombol pada layar komputer. 
 
 Walaupun sebagian besar dunia komputasi telah meninggalkan terminal, kebenarannya adalah terminal masih fundamental yang digynakan oleh sebagian besar bahasa pemrogaman. Bahasa pemrogaman Go tidak berbeda, sehingga sebelum kita menulis program pada Go, terlebih dahulu kita perlu memiliki pemahaman dasar bagaimana terminal bekerja.  
 
@@ -47,7 +47,7 @@ Sebagai programmer, alat utama yang digunakan untuk menulis program adalah Text 
 
 ###*Tools*
 
-Go adalah bahasa pemrogaman yang dikompilasi, artinya source code diterjemahkan ke dalam bahasa yang dapat dimengerti oleh komputer. Terkait akan hal tersebut, sebelum program Go dibuat, kita membutuhkan Go compiler. Installer akan mengatur Go untuk anda secara otomatis. Informasi lebih lanjut dapat ditemukan di http://www.golang.org
+Go adalah bahasa pemrogaman yang dikompilasi, artinya *source code* diterjemahkan ke dalam bahasa yang dapat dimengerti oleh komputer. Terkait akan hal tersebut, sebelum program Go dibuat, kita membutuhkan Go compiler. Installer akan mengatur Go untuk anda secara otomatis. Informasi lebih lanjut dapat ditemukan di http://www.golang.org
 
 
 ##BAB 2. PROGRAM PERTAMA
@@ -114,6 +114,79 @@ func main() {
 ```
 
 *Functions* adalah blok bangunan dari program Go, dimana memiliki input, output dan serangkaian langkah-langkah yang disebut pernyataan kemudian dijalankan dalam kerangka tertentu.
+
+##BAB 3. *TYPES*
+Tipe data dikategorikan didalam suatu set yang terkait dengan nilai-nilai, dimana setiap nilai menggambarkan operasi yang dapat dilakukan oleh fungsi tersebut. Tipe data pada program Go sama halnya dengan tipe data pada umumnya yaitu terdiri dari 3 jenis, yaitu :
+1.	Number
+2.	String
+3.	Booleans 
+
+###*3.1	Number* (Angka)
+Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
+
+####*3.1.1	Integers*
+
+*Integers* adalah bilangan bulat seperti halnya dalam matematika. Jenis angka ini tanpa komponen desimal. Tipe *integers* digunakan dalam program untuk mendeklarasikan suatu variable yang termasuk bilangan bulat. Dengan kelompok :
+    *int/int32	: digunakan untuk bilangan bulat yang jumlah digitnya  20 - 232
+    *int64		: digunakan untuk bilangan bulat yang jumlah digitnya 264 dst..
+
+contoh program Go nya :
+
+    *package main
+                                                                                                                          *import “fmt”
+                                                                                                                          *func main (){
+        *var x int
+        *x := 9
+        *fmt.Println(x)
+        *}
+
+###*3.1.2	Floating*
+
+*Floating* adalah tipe angka desimal, seperti halnya integer, jumlah digit untuk data float dideklarasikan dengan :
+    *float/float32	: digunakan untuk bilangan bulat yang jumlah digitnya  20 - 232
+    *float64		: digunakan untuk bilangan bulat yang jumlah digitnya 264 dst..
+    
+contoh program Go nya :
+
+    *package main
+                                                                                                                          *import “fmt”
+                                                                                                                          *func main (){
+        *var x float
+        *x := 9.358463
+        *fmt.Println(x)
+    *}
+
+###*3.2	String*
+Adalah tipe data yang bias dikatakan sebagai karakter tertentu. Setiap karakter mempunyai kode nya tersendiri. Seperti \n yang berarti *newline* dan \t berarti *tab*, dan lainnya.
+Pada bab sebelumnya, dimana anda diminta untuk membuat program dengan output “Hello Word”. Tipe data tersebut termasuk ke dalam string. 
+
+Contoh program Go nya :
+
+    *package main
+                                                                                                                          *import "fmt"
+                                                                                                                          *func main() {
+        *fmt.Println(len("Hello World"))
+    *}
+ 
+
+###*3.3	Booleans*
+*Booleans* disini dapat dikatakan sebagai operator logika yang dapat menghasilkan output ‘TRUE’ dan ‘FALSE’. Nilai tersebut dapat dihasilkan dengan pengoperasian menggunakan operator ‘AND’, ‘OR’, dan ‘NOT’.
+
+####3.3.1	AND (&&)
+Operator && akan bernilai ‘TRUE’ apabila semua persyaratan yang diminta bernilai ‘TRUE’, namun jika salah satu persyaratannya bernilai ‘FALSE’ maka akan menghasilkan ‘FALSE’.
+
+####3.3.2	OR (||)
+Pada operator OR akan menghasilkan “FALSE” jika semua persyaratan bernili ‘FALSE’, dapat dikatan operator OR ini merupakan kebalikan dari operator AND.
+
+####3.3.3	NOT (!)
+Operator NOT ini akan mengasilkan keluaran yang merupakan kebalikan dari nilai yang diperintahkan atau dioperasikan.
+Contoh :
+jika diberikan perintah :
+    *a>b menghasilkan ‘TRUE’
+    
+    dalam operator NOT menjadi :
+    *!(a>b) menghasilkan ‘FALSE’
+
 
 
 ##BAB 5. *CONTROL STRUCTURES*
