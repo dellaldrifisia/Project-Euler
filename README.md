@@ -153,7 +153,8 @@ contoh program Go nya :
     
 contoh program Go nya :
 
-    package main
+```go
+package main
     
     import “fmt”
     
@@ -162,6 +163,7 @@ contoh program Go nya :
         x := 9.358463
         fmt.Println(x)
     }
+```
 
 ###*2. String*
 Adalah tipe data yang bias dikatakan sebagai karakter tertentu. Setiap karakter mempunyai kode nya tersendiri. Seperti \n yang berarti *newline* dan \t berarti *tab*, dan lainnya.
