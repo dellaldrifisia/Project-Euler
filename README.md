@@ -122,10 +122,10 @@ Tipe data dikategorikan didalam suatu set yang terkait dengan nilai-nilai, diman
 2.	String
 3.	Booleans 
 
-###*3.1	Number* (Angka)
+###*1. Number* (Angka)
 Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
 
-####*3.1.1	Integers*
+####*1a. Integers*
 
 *Integers* adalah bilangan bulat seperti halnya dalam matematika. Jenis angka ini tanpa komponen desimal. Tipe *integers* digunakan dalam program untuk mendeklarasikan suatu variable yang termasuk bilangan bulat. Dengan kelompok :
 
@@ -144,7 +144,7 @@ contoh program Go nya :
         fmt.Println(x)
     }
 
-###*3.1.2	Floating*
+###*1b. Floating*
 
 *Floating* adalah tipe angka desimal, seperti halnya integer, jumlah digit untuk data float dideklarasikan dengan :
 
@@ -163,7 +163,7 @@ contoh program Go nya :
         fmt.Println(x)
     }
 
-###*3.2	String*
+###*2. String*
 Adalah tipe data yang bias dikatakan sebagai karakter tertentu. Setiap karakter mempunyai kode nya tersendiri. Seperti \n yang berarti *newline* dan \t berarti *tab*, dan lainnya.
 Pada bab sebelumnya, dimana anda diminta untuk membuat program dengan output “Hello Word”. Tipe data tersebut termasuk ke dalam string. 
 
@@ -178,16 +178,16 @@ Contoh program Go nya :
     }
  
 
-###*3.3	Booleans*
+###*3. Booleans*
 *Booleans* disini dapat dikatakan sebagai operator logika yang dapat menghasilkan output ‘TRUE’ dan ‘FALSE’. Nilai tersebut dapat dihasilkan dengan pengoperasian menggunakan operator ‘AND’, ‘OR’, dan ‘NOT’.
 
-####3.3.1	AND (&&)
+####3a. AND (&&)
 Operator && akan bernilai ‘TRUE’ apabila semua persyaratan yang diminta bernilai ‘TRUE’, namun jika salah satu persyaratannya bernilai ‘FALSE’ maka akan menghasilkan ‘FALSE’.
 
-####3.3.2	OR (||)
+####3b. OR (||)
 Pada operator OR akan menghasilkan “FALSE” jika semua persyaratan bernili ‘FALSE’, dapat dikatan operator OR ini merupakan kebalikan dari operator AND.
 
-####3.3.3	NOT (!)
+####3c. NOT (!)
 Operator NOT ini akan mengasilkan keluaran yang merupakan kebalikan dari nilai yang diperintahkan atau dioperasikan.
 Contoh :
 
@@ -203,7 +203,7 @@ jika diberikan perintah :
 
 *Control structures* dibutuhkan dalam mengerjakan suatu proses yang berulang-ulang (looping).
 
-###For
+###1. For
 
 For digunakan untuk mengulang daftar pernyataan (blok) beberapa kali sehingga kita tidak perlu menuliskannya secara berulang, cukup tuliskan perintahnya sekali saja. Contoh program untuk menampilkan angka 1 sampai 10:
 
@@ -218,7 +218,7 @@ func main() {
 * i merupakan variabel yang digunakan untuk mengontrol bilangan atau angka yang ingin di tampilkan.
 * Alur iterasi program di atas adalah: Untuk i=1 di cek apakah nilai i masih kecil atau sama dengan 10. Jika i bernilai kecil atau sama dengan 10 (pernyataan *TRUE*) maka akan dijalankan perintah selanjutnya yaitu `fmt.Println(i)` yang artinya nilai i akan ditampilkan selama masih memenuhi syarat kecil atau sama dengan 10. Setelah bilangan pertama ditampilakan maka nilai i akan bertambah melalui perintah `i++`. Nilai i selanjutnya akan menjalankan perintah yang sama dengan yang pertama. *Looping* akan berhenti saat i bernilai lebih dari 10.
 
-###If
+###2. If
 
 If merupakan *statement* logika yang biasanya diikuti oleh *statement* `else`. Perintah `if` akan dijalankan apabila pernyataan bernilai *TRUE*, namun jika pernyataan bernilai *FALSE* maka yang akan dijalankan adalah perintah pada bagian `else`. `if` dan `else` biasanya digunakan bersamaan dengan `for`. Contohnya adalah untuk menampilkan angka 1 sampai 10 serta jenisnya apakan bilangan ganjil atau genap.
 
@@ -235,7 +235,7 @@ func main() {
 ```
 * Alur iterasi program ini adalah: saat i=1 maka akan di cek terlebih dahulu apakan nilai i lebih kecil atau sama dengan 10. Apabila i kecil atau sama dengan 10 maka aka dilakukan perintah selanjutnya yaitu `if i % 2 == 0`. Jika pernyataan ini bernilai *TRUE* maka akan dijalankan perintah `fmt.Println(i, "genap")` yang akan menampilkan nilai i tersebut dan disertai dengan *string* 'genap'. Namun apabila pernyataan bernilai *FALSE* (i tidak habis dibagi 2) maka akan dijalankan perintah `fmt.Println(i, "ganjil")`. Begitu seterusnya hingga program akan berhenti apabila nilai i lebih besar dari 10.
 
-###Switch
+###3. Switch
 
 Misalkan kita ingin membuat program yang dapat menampilkan nama dari suatu angka. Agar lebih memudahkan kita dapat menuliskan programnya dengan menggunakan format `switch case`. Contoh: menampilkan nama angka dari 1 sampai 5.
 
@@ -255,7 +255,104 @@ default: fmt.Println("Angka tidak diketahui")
 
 ##BAB 6. ARRAY, *SLICES*, DAN *MAPS*
 
-###*Maps*
+###*1. Array*
+
+Array adalah kumpulan dari nilai-nilai yang bertipe sama dan berurutan yang disimpan di dalam memori dengan jumlah element tertentu. 
+
+Contoh array dalam Go :
+
+    var x [9]int 
+    
+    - x adalah nama variable
+    - [9] adalah jumlah elemen array
+    - int adalah tipe data untuk bilangin bulat
+
+Dapat kita lihat untuk *statement* diatas memiliki fungsi untuk memberi perintah kepada computer untuk menyiapkan 9 memori atau wadah yang akan diisi dengan bilangan bulat dan diberi nama x.
+
+Selanjutnya, kita coba untuk menjalankan program berikut ya :
+
+    package main
+
+    import "fmt"
+
+    func main() {
+        var x [5]int
+        x[4] = 100
+        fmt.Println(x)
+    } 
+
+Jangan lupa, dibiasakan sebelum menulis program, file disimpan terlebih dahulu dengan format ekstensi go. Program ini kita simpan dengan nama array1.go
+
+Setelah di jalankan pada terminal, anda akan melihat output :
+
+    [0 0 0 0 100]
+
+Dari program diatas, dapat dipahami bahwa program memberikan perintah kepada komputer untuk menyiapkan 5 buah memori atau elemen berupa bilangan bulat. Kemudian dideklarasikan bahwa nilai dari x[4] = 100, lalu print nilai x setiap elemen array. Perlu diketahui bahwa dalam array, index array dimulai dari 0 (0 1 2 3 4, dst..). Sehingga index array ke 4, yaitu urutan array ke 5 bernilai 100. Dan elemen array lainnya bernilai 0, karena tidak dideklarasikan.
+
+Apakah sudah cukup dipahami dengan penggambaran seperti itu?
+
+Jika sudah, mari kita coba membuat program yang fungsinya lebih kompleks :
+
+Simpan program berikut dengan nama array2.go
+
+    package main
+
+    import “fmt”
+
+    func main() {
+        var x [5]float64
+        x[0] = 67
+        x[1] = 78
+        x[2] = 84
+        x[3] = 98
+        x[4] = 79
+        var total float64 = 0
+        for i := 0; i < len(x); i++ {
+            total += x[i]
+        }
+        
+        fmt.Println(total / (len(x))
+    }
+
+Program tersebut akan menghasilkan output :
+
+    81.2
+
+Dapat dipahami bahwa dalam program tersebut bertujuan untuk menjumlahkan semua elemen array kemudian dihitung nilai rata-ratanya.
+Untuk melakukan operasi matematika tersebut, dipermudah dengan fungsi looping for seperti yang telah anda pelajari pada bab 5 sebelumnya. Len (x) menyatakan besar elemen array yang dideklarasikan. 
+
+###*2. Slices*
+Slices dapat dikatakan sebagai salah satu segmen array. Seperti halnya array, slices juga memiliki index dan panjang tertentu. Namun, slices ini panjangnya dapat diubah. 
+Untuk lebih jelaskan, mari kita buat program berikut :
+
+Disimpan dengan nama slice.go
+
+    package main
+
+    import “fmt”
+ 
+    func main() {
+        slice1 := []int{1,2,3}
+        slice2 := make([]int, 2)
+        copy(slice2, slice1)
+    
+    fmt.Println(slice1, slice2)
+    }
+
+Setelah dijalankan, output yang diperoleh adalah :
+
+    [1,2,3] [1,2]
+
+Bagaiamana? Apakah dapat dipahami?
+
+Penjelasannya sebagai berikut :
+
+Pertama slice1 := []int{1,2,3} memerintahkan untuk membuat slice dengan jumlah elemen yang tidak ditentukan namun sudah dideklarasikan secara langsung dengan := bernilai 1,2 dan 3. Kemudian, dibuat juga slice2 dengan jumlah array sebanyak 2 elemen. Lalu, disalin nilai pada slice1 yang jumlahnya disesuaikan dengan array pada slice2 yaitu hanya 2 elemen. Terakhir, diperintahkan untuk mencetak slice1 dan slice 2. Sehingga nilai pada slice1 adalah [1,2,3] dan slice2 [1,2].
+Apakah sekarang sudah cukup dipahami? Untuk lebih yakin, silahkan coba program sederhana tersebut.
+Selamat mencoba ;-)
+
+
+###*3. Maps*
 
 *Map* adalah koleksi atau sekumpulan pasangan *key-value*. Juga dikenal sebagai array asosiatif atau kamus. *Maps* digunakan untuk melihat *value* berdasarkan *key* yang berhubungan. Contoh: *Maps* beberapa unsur kimia yang di-indeks-kan oleh simbol nya.
 
