@@ -310,11 +310,12 @@ func main() {
     x[2] = 84
     x[3] = 98
     x[4] = 79
-    var total float64 = 0
+    var total float64 = 0.0
     for i := 0; i < len(x); i++ {
         total += x[i]
     }
-    fmt.Println(total / (len(x))
+    fmt.Println(total / float64(len(x)))
+}
 ```
 
 Program tersebut akan menghasilkan output :
