@@ -127,18 +127,20 @@ Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
 ####*3.1.1	Integers*
 
 *Integers* adalah bilangan bulat seperti halnya dalam matematika. Jenis angka ini tanpa komponen desimal. Tipe *integers* digunakan dalam program untuk mendeklarasikan suatu variable yang termasuk bilangan bulat. Dengan kelompok :
-    *int/int32	: digunakan untuk bilangan bulat yang jumlah digitnya  20 - 232
-    *int64		: digunakan untuk bilangan bulat yang jumlah digitnya 264 dst..
+    *int/int32	: digunakan untuk bilangan bulat yang jumlah digitnya 2^0 - 2^32
+    *int64		: digunakan untuk bilangan bulat yang jumlah digitnya 2^64 dst..
 
 contoh program Go nya :
 
-    *package main
-                                                                                                                          *import “fmt”
-                                                                                                                          *func main (){
-        *var x int
-        *x := 9
-        *fmt.Println(x)
-        *}
+    package main
+    
+    import “fmt”
+    
+    func main (){
+        var x int
+        x := 9
+        fmt.Println(x)
+    }
 
 ###*3.1.2	Floating*
 
@@ -148,13 +150,15 @@ contoh program Go nya :
     
 contoh program Go nya :
 
-    *package main
-                                                                                                                          *import “fmt”
-                                                                                                                          *func main (){
-        *var x float
-        *x := 9.358463
-        *fmt.Println(x)
-    *}
+    package main
+    
+    import “fmt”
+    
+    func main (){
+        var x float
+        x := 9.358463
+        fmt.Println(x)
+    }
 
 ###*3.2	String*
 Adalah tipe data yang bias dikatakan sebagai karakter tertentu. Setiap karakter mempunyai kode nya tersendiri. Seperti \n yang berarti *newline* dan \t berarti *tab*, dan lainnya.
@@ -162,11 +166,13 @@ Pada bab sebelumnya, dimana anda diminta untuk membuat program dengan output “
 
 Contoh program Go nya :
 
-    *package main
-                                                                                                                          *import "fmt"
-                                                                                                                          *func main() {
-        *fmt.Println(len("Hello World"))
-    *}
+    package main
+    
+    import "fmt"
+    
+    func main() {
+        fmt.Println(len("Hello World"))
+    }
  
 
 ###*3.3	Booleans*
@@ -181,12 +187,13 @@ Pada operator OR akan menghasilkan “FALSE” jika semua persyaratan bernili �
 ####3.3.3	NOT (!)
 Operator NOT ini akan mengasilkan keluaran yang merupakan kebalikan dari nilai yang diperintahkan atau dioperasikan.
 Contoh :
+
 jika diberikan perintah :
-    *a>b menghasilkan ‘TRUE’
+
+    a>b menghasilkan ‘TRUE’
     
     dalam operator NOT menjadi :
-    *!(a>b) menghasilkan ‘FALSE’
-
+    !(a>b) menghasilkan ‘FALSE’
 
 
 ##BAB 5. *CONTROL STRUCTURES*
