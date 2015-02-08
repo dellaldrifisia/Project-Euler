@@ -133,7 +133,6 @@ Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
 - int64		: digunakan untuk bilangan bulat yang jumlah digitnya 2 pangkat 64
 
 contoh program Go nya :
-
 ```go
 package main
 
@@ -285,6 +284,7 @@ func main() {
     fmt.Println(x)
 } 
 ```
+
 Jangan lupa, dibiasakan sebelum menulis program, file disimpan terlebih dahulu dengan format ekstensi go. Program ini kita simpan dengan nama array1.go
 
 Setelah di jalankan pada terminal, anda akan melihat output :
@@ -315,7 +315,6 @@ func main() {
         total += x[i]
     }
     fmt.Println(total / (len(x))
-}
 ```
 
 Program tersebut akan menghasilkan output :
@@ -331,17 +330,17 @@ Untuk lebih jelaskan, mari kita buat program berikut :
 
 Disimpan dengan nama slice.go
 ```go
-    package main
+package main
 
-    import “fmt”
+import “fmt”
  
-    func main() {
-        slice1 := []int{1,2,3}
-        slice2 := make([]int, 2)
-        copy(slice2, slice1)
+func main() {
+    slice1 := []int{1,2,3}
+    slice2 := make([]int, 2)
+    copy(slice2, slice1)
     
     fmt.Println(slice1, slice2)
-    }
+}
 ```
 Setelah dijalankan, output yang diperoleh adalah :
 
