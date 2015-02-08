@@ -62,14 +62,16 @@ Artinya, anda memerintahkan untuk membuat direktori baru (mkdir) misal pada driv
 
 Pada text editor anda, buatlah file baru didalam folder golang, kemudian simpan file tersebut dengan nama main.go, lalu buatlah program berikut :
 
-    package main
+```go
+package main
     
-    import "fmt"
-    // this is a comment
+import "fmt"
+// this is a comment
     
-    func main() {
-      fmt.Println("Hello World")
-    }
+func main() {
+  fmt.Println("Hello World")
+}
+```
 
 Kemudian jalankan program tersebut pada terminal anda, tapi arahkan terlebih dahulu terminal anda ke direktori file anda disimpan.
 Untuk menjalankan program, berikan perintah berikut pada terminal anda :
@@ -86,7 +88,9 @@ Perintah go run artinya menjalankan program dengan memanggil file yang dipisahka
 
 Selanjutnya, kita akan melihat program ini secara lebih terperinci. Program Go dibaca dari atas ke bawah dan dari kiri ke kanan. Baris pertama menyatakan ini :
 
-    package main
+```go
+package main
+```
 
 Package main dikenal sebagai “package declaration”. Setiap program Go harus dimulai dengan mendeklarasikan sebuah package. Dimana package adalah cara pengorganisasian oleh Go dan code yang digunakan kembali. Ada dua jenis program Go, yaitu :
 
@@ -95,19 +99,58 @@ Package main dikenal sebagai “package declaration”. Setiap program Go harus 
 
 Selanjutnya :
 
-    import "fmt"
+```go
+import "fmt"
+```
 
 Kaca kunci import adalah bagaimana kita menyertakan code dari package lain yang digunakan pada program ini. Package fmt (singkatan untuk format) adalah menerapkan format untuk input dan output. Tanda kutip ganda pada fmt (“fmt”) dikenal sebagai string literal” yang merupakan jenis ekspresi.
 
 Selanjutnya, kita akan melihat deklarasi fungsi berikut :
 
-    func main() {
-      fmt.Println("Hello World")
-    }
+```go
+func main() {
+  fmt.Println("Hello World")
+}
+```
 
 *Functions* adalah blok bangunan dari program Go, dimana memiliki input, output dan serangkaian langkah-langkah yang disebut pernyataan kemudian dijalankan dalam kerangka tertentu.
 
-Masih belum selesai uni maaf, aku lg ngerjain di rumah diego. Tiba2 mbahnya sakit gt uni gak sadarin diri, 
+
+##BAB 5. *CONTROL STRUCTURES*
+
+*Control structures* dibutuhkan dalam mengerjakan suatu proses yang berulang-ulang (looping).
+
+###For
+
+For digunakan untuk mengulang daftar pernyataan (blok) beberapa kali sehingga kita tidak perlu menuliskannya secara berulang, cukup tuliskan perintahnya sekali saja. Contoh program untuk menampilkan angka 1 sampai 10:
+
+```go
+func main() {
+    for i := 1; i <= 10; i++ {
+        fmt.Println(i)
+    }
+}
+```
+
+* i merupakan variabel yang digunakan untuk mengontrol bilangan atau angka yang ingin di tampilkan.
+* Alur iterasi program di atas adalah: Untuk i=1 di cek apakah nilai i masih kecil atau sama dengan 10. Jika i bernilai kecil atau sama dengan 10 (pernyataan *TRUE*) maka akan dijalankan perintah selanjutnya yaitu `fmt.Println(i)` yang artinya nilai i akan ditampilkan selama masih memenuhi syarat kecil atau sama dengan 10. Setelah bilangan pertama ditampilakan maka nilai i akan bertambah melalui perintah `i++`. Nilai i selanjutnya akan menjalankan perintah yang sama dengan yang pertama. *Looping* akan berhenti saat i bernilai lebih dari 10.
+
+###If
+
+If merupakan *statement* logika yang biasanya diikuti oleh *statement* `else`. Perintah `if` akan dijalankan apabila pernyataan bernilai *TRUE*, namun jika pernyataan bernilai *FALSE* maka yang akan dijalankan adalah perintah pada bagian `else`. `if` dan `else` biasanya digunakan bersamaan dengan `for`. Contohnya adalah untuk menampilkan angka 1 sampai 10 serta jenisnya apakan bilangan ganjil atau genap.
+
+```go
+func main() {
+    for i := 1; i <= 10; i++ {
+        if i % 2 == 0 {
+            fmt.Println(i, "genap")
+        } else {
+            fmt.Println(i, "ganjil")
+        }
+    }
+}
+```
+* Alur iterasi program ini adalah: saat i=1 maka akan di cek terlebih dahulu apakan nilai i lebih kecil atau sama dengan 10. Apabila i kecil atau sama dengan 10 maka aka dilakukan perintah selanjutnya yaitu `if i % 2 == 0`. Jika pernyataan ini bernilai *TRUE* maka akan dijalankan perintah `fmt.Println(i, "genap")` yang akan menampilkan nilai i tersebut dan disertai dengan *string* 'genap'. Namun apabila pernyataan bernilai *FALSE* (i tidak habis dibagi 2) maka akan dijalankan perintah `fmt.Println(i, "ganjil")`. Begitu seterusnya hingga program akan berhenti apabila nilai i lebih besar dari 10.
 
 
 
