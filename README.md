@@ -117,6 +117,7 @@ func main() {
 
 ##BAB 3. *TYPES*
 Tipe data dikategorikan didalam suatu set yang terkait dengan nilai-nilai, dimana setiap nilai menggambarkan operasi yang dapat dilakukan oleh fungsi tersebut. Tipe data pada program Go sama halnya dengan tipe data pada umumnya yaitu terdiri dari 3 jenis, yaitu :
+
 1.	Number
 2.	String
 3.	Booleans 
@@ -127,8 +128,9 @@ Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
 ####*3.1.1	Integers*
 
 *Integers* adalah bilangan bulat seperti halnya dalam matematika. Jenis angka ini tanpa komponen desimal. Tipe *integers* digunakan dalam program untuk mendeklarasikan suatu variable yang termasuk bilangan bulat. Dengan kelompok :
-    *int/int32	: digunakan untuk bilangan bulat yang jumlah digitnya 2^0 - 2^32
-    *int64		: digunakan untuk bilangan bulat yang jumlah digitnya 2^64 dst..
+
+- int/int32	: digunakan untuk bilangan bulat yang jumlah digitnya 2 pangkat 32
+- int64		: digunakan untuk bilangan bulat yang jumlah digitnya 2 pangkat 64
 
 contoh program Go nya :
 
@@ -145,8 +147,9 @@ contoh program Go nya :
 ###*3.1.2	Floating*
 
 *Floating* adalah tipe angka desimal, seperti halnya integer, jumlah digit untuk data float dideklarasikan dengan :
-    *float/float32	: digunakan untuk bilangan bulat yang jumlah digitnya  20 - 232
-    *float64		: digunakan untuk bilangan bulat yang jumlah digitnya 264 dst..
+
+- float/float32	: digunakan untuk bilangan bulat yang jumlah digitnya  2 pangkat 32
+- float64		: digunakan untuk bilangan bulat yang jumlah digitnya  2 pangkat 64
     
 contoh program Go nya :
 
