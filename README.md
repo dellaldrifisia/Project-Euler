@@ -134,15 +134,17 @@ Tipe data number dibagi menjadi dua jenis yaitu *integers* dan *floating*.
 
 contoh program Go nya :
 
-    package main
+```go
+package main
+
+import “fmt”
     
-    import “fmt”
-    
-    func main (){
+func main (){
         var x int
         x := 9
         fmt.Println(x)
     }
+```
 
 ###*1b. Floating*
 
@@ -170,15 +172,15 @@ Adalah tipe data yang bias dikatakan sebagai karakter tertentu. Setiap karakter 
 Pada bab sebelumnya, dimana anda diminta untuk membuat program dengan output “Hello Word”. Tipe data tersebut termasuk ke dalam string. 
 
 Contoh program Go nya :
-
-    package main
+```go
+package main
     
-    import "fmt"
+import "fmt"
     
-    func main() {
-        fmt.Println(len("Hello World"))
+func main() {
+    fmt.Println(len("Hello World"))
     }
- 
+```
 
 ###*3. Booleans*
 *Booleans* disini dapat dikatakan sebagai operator logika yang dapat menghasilkan output ‘TRUE’ dan ‘FALSE’. Nilai tersebut dapat dihasilkan dengan pengoperasian menggunakan operator ‘AND’, ‘OR’, dan ‘NOT’.
@@ -272,17 +274,17 @@ Contoh array dalam Go :
 Dapat kita lihat untuk *statement* diatas memiliki fungsi untuk memberi perintah kepada computer untuk menyiapkan 9 memori atau wadah yang akan diisi dengan bilangan bulat dan diberi nama x.
 
 Selanjutnya, kita coba untuk menjalankan program berikut ya :
+```go
+package main
 
-    package main
+import "fmt"
 
-    import "fmt"
-
-    func main() {
-        var x [5]int
-        x[4] = 100
-        fmt.Println(x)
-    } 
-
+func main() {
+    var x [5]int
+    x[4] = 100
+    fmt.Println(x)
+} 
+```
 Jangan lupa, dibiasakan sebelum menulis program, file disimpan terlebih dahulu dengan format ekstensi go. Program ini kita simpan dengan nama array1.go
 
 Setelah di jalankan pada terminal, anda akan melihat output :
@@ -296,25 +298,25 @@ Apakah sudah cukup dipahami dengan penggambaran seperti itu?
 Jika sudah, mari kita coba membuat program yang fungsinya lebih kompleks :
 
 Simpan program berikut dengan nama array2.go
+```go
+package main
 
-    package main
+import “fmt”
 
-    import “fmt”
-
-    func main() {
-        var x [5]float64
-        x[0] = 67
-        x[1] = 78
-        x[2] = 84
-        x[3] = 98
-        x[4] = 79
-        var total float64 = 0
-        for i := 0; i < len(x); i++ {
-            total += x[i]
-        }
-        
-        fmt.Println(total / (len(x))
+func main() {
+    var x [5]float64
+    x[0] = 67
+    x[1] = 78
+    x[2] = 84
+    x[3] = 98
+    x[4] = 79
+    var total float64 = 0
+    for i := 0; i < len(x); i++ {
+        total += x[i]
     }
+    fmt.Println(total / (len(x))
+}
+```
 
 Program tersebut akan menghasilkan output :
 
@@ -328,7 +330,7 @@ Slices dapat dikatakan sebagai salah satu segmen array. Seperti halnya array, sl
 Untuk lebih jelaskan, mari kita buat program berikut :
 
 Disimpan dengan nama slice.go
-
+```go
     package main
 
     import “fmt”
@@ -340,7 +342,7 @@ Disimpan dengan nama slice.go
     
     fmt.Println(slice1, slice2)
     }
-
+```
 Setelah dijalankan, output yang diperoleh adalah :
 
     [1,2,3] [1,2]
